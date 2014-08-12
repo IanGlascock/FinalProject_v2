@@ -6,6 +6,7 @@ public class scorez : MonoBehaviour {
 
 	void OnTriggerEnter ( Collider player ){
 		Destroy (seed.gameObject ); 
+		audio.Play ();
 	}
 	// Use this for initialization
 	void Start () {

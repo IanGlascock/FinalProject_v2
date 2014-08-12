@@ -33,6 +33,8 @@ public class CharacterControls : MonoBehaviour {
 			//W to jump
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				amountToMove.y = jumpForce;
+				// must add aduio fle "PlayerJump2" to Player model.
+				audio.Play ();
 			}
 		}	
 

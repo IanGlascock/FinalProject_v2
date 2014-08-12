@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class scrolling2 : MonoBehaviour {
+public class scrolling3 : MonoBehaviour {
 	// allows for access public to var. which has context
-	public float speed = 6f;
+	public float speed = 8f;
 	// allows changing speed for additional levels
 	public int level = 2;
 	// acces too variriable direction 
@@ -31,3 +31,4 @@ public class scrolling2 : MonoBehaviour {
 		// > when teach --> touch exit end level show score 
 	}
 }
+
