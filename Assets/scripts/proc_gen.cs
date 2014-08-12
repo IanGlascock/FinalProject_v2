@@ -13,16 +13,15 @@ public class proc_gen : MonoBehaviour {
 		while (counter < spawnRadius * 4 ) { // as long as this expression is true it will keep looping
 			Transform prefabtoSpawn; //starts blank
 			int prefabIndex = Random.Range (0,4); // possible numbers 1 2 3 NOT 4
-					if (prefabIndex == 0) {
-						prefabtoSpawn = small; 
+				if (prefabIndex == 0) {
+					prefabtoSpawn = small; 
 				} else if (prefabIndex == 1) {
-							prefabtoSpawn = medium;
-						} else if (prefabIndex == 2){
-				prefabtoSpawn = big;
-			}
-			else { 
-				prefabtoSpawn = seed;
-			}
+					prefabtoSpawn = medium;
+				} else if (prefabIndex == 2){
+					prefabtoSpawn = big;
+				} else { 
+					prefabtoSpawn = seed;
+				}
 			
 
 			
