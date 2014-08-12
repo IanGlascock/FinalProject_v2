@@ -1,7 +1,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{B0EC0920-6312-0AAB-8526-DB48424F90EB}") = "FinalProject_v2", "Assembly-CSharp-firstpass.csproj", "{1A05C947-98C0-4F93-39E3-2E06DB3648F2}"
+EndProject
 Project("{B0EC0920-6312-0AAB-8526-DB48424F90EB}") = "FinalProject_v2", "Assembly-CSharp.csproj", "{9E961D04-659A-94BA-0EA8-2A6207028CBF}"
+EndProject
+Project("{B0EC0920-6312-0AAB-8526-DB48424F90EB}") = "FinalProject_v2", "Assembly-UnityScript-firstpass.unityproj", "{F9B56152-712F-208C-25A0-AE6322406EF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +13,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A05C947-98C0-4F93-39E3-2E06DB3648F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A05C947-98C0-4F93-39E3-2E06DB3648F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A05C947-98C0-4F93-39E3-2E06DB3648F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A05C947-98C0-4F93-39E3-2E06DB3648F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9E961D04-659A-94BA-0EA8-2A6207028CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E961D04-659A-94BA-0EA8-2A6207028CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E961D04-659A-94BA-0EA8-2A6207028CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E961D04-659A-94BA-0EA8-2A6207028CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B56152-712F-208C-25A0-AE6322406EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B56152-712F-208C-25A0-AE6322406EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B56152-712F-208C-25A0-AE6322406EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B56152-712F-208C-25A0-AE6322406EF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+					GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -35,4 +47,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
+
 EndGlobal
