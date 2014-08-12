@@ -12,16 +12,13 @@ public class proc_gen : MonoBehaviour {
 		int counter = 0;
 		while (counter < spawnRadius * 4 ) { // as long as this expression is true it will keep looping
 			Transform prefabtoSpawn; //starts blank
-			int prefabIndex = Random.Range (0,4); // possible numbers 1 2 3 NOT 4
+			int prefabIndex = Random.Range (0,2); // possible numbers 1 2 3 NOT 4
 					if (prefabIndex == 0) {
 						prefabtoSpawn = small; 
 				} else if (prefabIndex == 1) {
 							prefabtoSpawn = medium;
-						} else if (prefabIndex == 2){
-				prefabtoSpawn = big;
-			}
-			else { 
-				prefabtoSpawn = seed;
+			} else {
+					prefabtoSpawn = big;
 			}
 			
 
@@ -30,6 +27,20 @@ public class proc_gen : MonoBehaviour {
 			            Quaternion.Euler (0,90,0) ); // rotates prefabs 90º  (90,90,-90)
 			counter ++; // add 1 to counter after each loop
 		}
+
+		int seedcounter = 0;
+		while (seedcounter < spawnRadius * 4 ) { // as long as this expression is true it will keep looping
+			Transform prefabtoSpawn; //starts blank
+					prefabtoSpawn = seed; 
+			
+			
+			
+			Instantiate( prefabtoSpawn, new Vector3 (Random.Range (0,spawnRadius * 12), Random.Range (0,spawnRadius), 0), 
+			            Quaternion.Euler (0,90,0) ); // rotates prefabs 90º  (90,90,-90)
+			seedcounter ++; // add 1 to counter after each loop
+		}
+
+
 	
 	}
 	void Update () {

@@ -9,6 +9,7 @@ public class scorez : MonoBehaviour {
 
 		Score.currentScore += coinValue;
 		Destroy (seed.gameObject ); 
+		audio.Play ();
 	}
 	// Use this for initialization
 	void Start () {

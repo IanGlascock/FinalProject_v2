@@ -6,5 +6,7 @@ public class KillBox : MonoBehaviour {
 	
 	void OnTriggerEnter ( Collider player ) {
 		Destroy ( player.gameObject );
+		audio.Play ();
+
 	}
 }
