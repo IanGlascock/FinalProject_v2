@@ -5,7 +5,7 @@ public class ScrollingBox : MonoBehaviour {
 
 	// allows for access public to var. which has context
 	float startSpeed = 1f;
-	float acceleration = 0.1f;
+	float acceleration = 0.01f;
 	float maxSpeed = 5;
 	// allows changing speed for additional levels
 	public int level = 1;
@@ -26,7 +26,7 @@ public class ScrollingBox : MonoBehaviour {
 		//                             add to sellf ammount         * change in time to adjust for dif. in FPS
 		//GetComponent<Transform>().position += new Vector3(1f,1f,0f) * Time.deltaTime * speed;
 		// makes the direction a variable that is editable in Unity
-		if (GetComponent<Transform>().position.x <= 95f) {
+		if (GetComponent<Transform>().position.x <= 92f) {
 			GetComponent<Transform>().position += direction * Time.deltaTime * startSpeed;
 			if (startSpeed <= maxSpeed) { 
 				startSpeed += acceleration; 
