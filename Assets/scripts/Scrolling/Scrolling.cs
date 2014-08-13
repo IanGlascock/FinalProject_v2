@@ -4,7 +4,7 @@ using System.Collections;
 public class Scrolling: MonoBehaviour {
 
 	// allows for access public to var. which has context
-	public float speed = 5f;
+	public float speed = 6f;
 	// allows changing speed for additional levels
 	public int level = 1;
 	// acces too variriable direction 
