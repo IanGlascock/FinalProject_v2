@@ -6,10 +6,11 @@ public class scorez : MonoBehaviour {
 	public int coinValue = 1;
 
 	void OnTriggerEnter ( Collider player ){
-
-		Score.currentScore += coinValue;
-		Destroy (seed.gameObject ); 
 		audio.Play ();
+		Score.currentScore += coinValue;
+
+		Destroy (seed.gameObject ); 
+	
 	}
 	// Use this for initialization
 	void Start () {

@@ -3,19 +3,11 @@ using System.Collections;
 
 public class Finishline : MonoBehaviour {
 	public Transform player;
+	public static bool win = false;
 
 	void OnTriggerEnter ( Collider Finishlinetest ){
-		Application.LoadLevel (0); 
-
-		GUI.Box (new Rect(250,100,200, 200), "Menu");
-		
-		if (GUI.Button( new Rect (300, 150, 100, 50), "Restart")) {
-			Application.LoadLevel ("KuanScene1");
+		win = true;
 		}
-		else if (GUI.Button( new Rect (300, 250, 100, 50), "Quit")) {
-			Application.Quit();
-		}
-	}
 	// Use this for initialization
 	void Start () {
 	
