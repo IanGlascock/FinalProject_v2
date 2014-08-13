@@ -6,6 +6,7 @@ public class KillingPlayer : MonoBehaviour {
 	
 	void OnTriggerEnter ( Collider MONSTER ){
 		Destroy (player.gameObject ); 
+		audio.Play (); 
 	}
 	// Use this for initialization
 	void Start () {
