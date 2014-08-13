@@ -7,9 +7,13 @@ public class CharacterControls : MonoBehaviour {
 
 	public float speed = 20f; 
 	public float acceleration = 25f;
-	public float jumpForce = 40;
+	public float jumpForce = 10;
+	public float airJumpForce = 10;
 	public float gravity = 20f;
 
+	public bool airborne;
+
+	private int notAirborne = 0;
 	private float currentSpeed;
 	private float targetSpeed;
 	private Vector3 amountToMove;
@@ -23,22 +27,59 @@ public class CharacterControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+
+		if (characterPhysics.stopped) {
+			targetSpeed = 0;
+			currentSpeed = 0;
+			}
+
 		//Movement
 		targetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
 		currentSpeed = IncrementTowards(currentSpeed, targetSpeed,acceleration);
 
 		if (characterPhysics.grounded) {
 			amountToMove.y = 0; //Reset gravity
-
+			notAirborne = 1;
 			//W to jump
-			if (Input.GetKeyDown (KeyCode.Space)) {
+			if (Input.GetKeyDown (KeyCode.W)) {
 				amountToMove.y = jumpForce;
-				// must add aduio fle "PlayerJump2" to Player model.
+				audio.Play ();
+
+				airborne = true;
+				//airborne += 1;
+			}
+
+			if (Input.GetKeyDown (KeyCode.UpArrow)) {
+				amountToMove.y = jumpForce;
 				audio.Play ();
 			}
-		}	
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				amountToMove.y = jumpForce;
+				audio.Play ();
+			}
+				// must add aduio fle "PlayerJump2" to Player model.
+				
+			}
+			
+//		if (airborne > 0) {
+		//	amountToMove.y = 0;
+
+			if (Input.GetKeyDown (KeyCode.W) && airborne == true) {
+				amountToMove.y = airJumpForce;
+				audio.Play ();
+				notAirborne += 1;
+//				airborne -= 1;
 
 
+
+		}
+
+//		if (airborne && (Input.GetKeyDown (KeyCode.W))) {
+//		 	  airborne = false;
+
+//		}
 
 		amountToMove.x = currentSpeed;
 		amountToMove.y -= gravity * Time.deltaTime;
