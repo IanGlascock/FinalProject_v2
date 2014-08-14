@@ -4,8 +4,9 @@ using System.Collections;
 public class scorez : MonoBehaviour {
 	public int coinValue = 1;
 	public AudioSource seedSound;
+	public Collider seedcollider;
 	
-	void OnTriggerEnter ( Collider Seed ){
+	void OnTriggerEnter (Collider seedcollider){
 		
 		Score.currentScore += coinValue;
 		seedSound.Play ();
