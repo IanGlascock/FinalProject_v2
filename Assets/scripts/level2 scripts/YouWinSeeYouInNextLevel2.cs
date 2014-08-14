@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class YouWinSeeYouInNextLevel : MonoBehaviour {
+public class YouWinSeeYouInNextLevel2 : MonoBehaviour {
 	public float boxoffsetY = 100f;
 	public float boxsizeX = 200f;
 	public float boxsizeY = 200f;

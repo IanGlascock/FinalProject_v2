@@ -8,7 +8,7 @@ public class ScrollingBox : MonoBehaviour {
 	float acceleration = 0.01f;
 	float maxSpeed = 5;
 	// allows changing speed for additional levels
-	public int level = 1;
+	public float level = 1f;
 	// acces too variriable direction 
 	public Vector3 direction; 
 

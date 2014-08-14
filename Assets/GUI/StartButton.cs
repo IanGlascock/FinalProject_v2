@@ -7,7 +7,7 @@ public class StartButton : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+		audio.Play ();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +20,6 @@ public class StartButton : MonoBehaviour {
 	}
 	
 	void OnMouseDown () {
-		Application.LoadLevel("KuanLevel2"); 
+		Application.LoadLevel("Level1"); 
 	}
 }
