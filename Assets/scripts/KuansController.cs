@@ -16,6 +16,7 @@ public class KuansController : MonoBehaviour {
 		
 		if (Input.GetKeyUp (KeyCode.Space)) {
 			GetComponent<Rigidbody> ().AddForce (Vector3.up * jumpForce);
+			audio.Play ();
 		}
 	}
 }

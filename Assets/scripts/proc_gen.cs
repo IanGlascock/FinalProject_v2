@@ -45,7 +45,9 @@ public class proc_gen : MonoBehaviour {
 	}
 	void Update () {
 	if (Input.GetKeyDown (KeyCode.Return)) {
-		Application.LoadLevel (0);
+			Score.currentScore =0;
+			KillingPlayer.killed = false;
+			Application.LoadLevel (1);
 	}
 	}
 }
